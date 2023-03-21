@@ -5,12 +5,12 @@ To use the script, simply execute it from the command line with the following co
 
 bash
 
-./Scanner.sh [OPTIONS] TARGET
+./Scanner.sh [Mode] Target [OPTIONS]
 
 Where OPTIONS are one or more of the following command-line options:
 
-    -b: Basic scanning (default)
-    -d: Depth scanning
+    -b: [Mode] Basic scanning (default)
+    -d: [Mode] Depth scanning
     -h: Show help
     -p: Port(s) to scan (comma-separated)
     -o: Output file to write scan results to
@@ -24,7 +24,7 @@ To perform a basic scan on the target system at IP address 192.168.1.1 and outpu
 
 bash
 
-./Scanner.sh -p 22,80,443 -o scan_results.txt 192.168.1.1
+sudo ./Scanner.sh -b 127.0.0.1 -p 80 -vv -o tr.txt -T 4
 
 Requirements
 
